@@ -41,7 +41,7 @@ export default function LoginCard() {
       setIsExploding(true);
       setTimeout(() => {
         setIsLogged(true);
-        navigate("/");
+        navigate("/gallery");
       }, 3000);
       return;
     } else {
@@ -55,7 +55,7 @@ export default function LoginCard() {
 
   useEffect(() => {
     if (isLogged) {
-      return navigate("/");
+      return navigate("/gallery");
     }
   });
 
@@ -88,7 +88,7 @@ export default function LoginCard() {
           </form>
         </CardContent>
         <CardFooter className="flex flex-row-reverse">
-          <Button onClick={handleSubmit}>Submit</Button>
+          <Button onClick={handleSubmit}>Login</Button>
         </CardFooter>
       </div>
       {isImage.show && <img src={isImage.src} className="rounded" />}
