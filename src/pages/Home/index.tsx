@@ -11,10 +11,10 @@ export default function index({}: Props) {
 
   let i = 0;
   function typeWriter() {
-    let txt = "Click the sloth!";
-    let speed = 200;
+    let txt = "Click the sloth! ";
+    let speed = 300;
     if (i < txt.length) {
-      setTitle(txt.slice(0, i + 1));
+      setTitle(txt.slice(0, i));
       i++;
       setTimeout(typeWriter, speed);
     }
@@ -25,8 +25,8 @@ export default function index({}: Props) {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center gap-20 text-center w-full h-screen">
-      <h1 className="typewriter text-6xl font-bold font-mono text-yellow-400">
+    <div className="flex flex-col justify-center items-center gap-20 text-center w-full h-screen bg-yellow-200">
+      <h1 className="typewriter text-6xl font-bold text-blue-400">
         {title}
       </h1>
       <Link to="/login">
