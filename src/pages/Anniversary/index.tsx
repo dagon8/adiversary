@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Novia from "../../assets/novia.webp";
 import NoviaSound from "../../assets/novia-sound.mp3";
 import { playSound } from "@/lib/utils";
@@ -17,7 +17,7 @@ export default function index({}: Props) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowDelayedComponent(true);
-    }, 20000); // 20000 milliseconds = 20 seconds
+    }, 15000); // 20000 milliseconds = 20 seconds
 
     const audio = playSound(NoviaSound);
     return () => {
@@ -40,14 +40,13 @@ export default function index({}: Props) {
       <h1 className="font-bold text-6xl text-blue-400">
         Feliz aniversario amoooooor!
       </h1>
-      <img src={Novia} />
       {showDelayedComponent && (
         <div className="flex gap-10">
           <Button
             size={"lg"}
             onClick={() => {
               playSound(GoatSound);
-              setTimeout(() => navigate("/date"), 1000);
+              setTimeout(() => navigate("/gallery"), 1000);
             }}
           >
             Si
@@ -66,6 +65,7 @@ export default function index({}: Props) {
           </Button>
         </div>
       )}
+      <img src={Novia} />
     </div>
   );
 }

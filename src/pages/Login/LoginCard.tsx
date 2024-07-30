@@ -41,7 +41,7 @@ export default function LoginCard() {
       setIsExploding(true);
       setTimeout(() => {
         setIsLogged(true);
-        navigate("/gallery");
+        navigate("/anniversary");
       }, 3000);
       return;
     } else {
@@ -55,7 +55,7 @@ export default function LoginCard() {
 
   useEffect(() => {
     if (isLogged) {
-      return navigate("/gallery");
+      return navigate("/anniversary");
     }
   });
 

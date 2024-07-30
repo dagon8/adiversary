@@ -53,7 +53,7 @@ export default function index({}: Props) {
         <Polaroid key={index} src={image.src} caption={image.caption} />
       ))}
 
-      <Link to={"/anniversary"}>
+      <Link to={"/date"}>
         <Polaroid
           src={KissCat}
           caption={"Click here to move on to the next part! 🥰"}

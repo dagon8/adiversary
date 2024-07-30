@@ -4,6 +4,8 @@ import Typewriter from "@/components/mine/Typewriter";
 import FestinSound from "../../assets/festin-sound.mp3";
 import { useEffect } from "react";
 import { playSound } from "@/lib/utils";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 type Props = {};
 
 export default function index({}: Props) {
@@ -16,7 +18,7 @@ export default function index({}: Props) {
     };
   }, []);
   return (
-    <div className="flex flex-col justify-center items-center gap-20 w-full h-screen bg-yellow-200">
+    <div className="flex flex-col justify-center items-center w-full h-screen bg-yellow-200">
       <div>
         <Typewriter
           text="Vision board for our date later."
@@ -29,7 +31,12 @@ export default function index({}: Props) {
           className="font-bold text-purple-400 text-6xl"
         />
       </div>
-      <VisionBoard />
+      <div className="flex flex-col gap-4 justify-center items-center w-full h-full">
+        <Link to={"/gallery"}>
+          <Button>Back to Gallery 📷</Button>
+        </Link>
+        <VisionBoard />
+      </div>
     </div>
   );
 }

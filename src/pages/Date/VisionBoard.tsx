@@ -6,9 +6,8 @@ import {
 import painting from "../../assets/painting.jpg";
 import brownie from "../../assets/brownie.jpg";
 import fruit from "../../assets/fruit.jpeg";
-import picnic from "../../assets/picnic.webp";
-import sandwich from "../../assets/sandwich.jpg";
-import sushi from "../../assets/sushi.jpg";
+import cuddle from "../../assets/cuddle.png"
+import dinos from "../../assets/dinos.webp"
 
 export default function ResizableDemo() {
   return (
@@ -40,20 +39,12 @@ export default function ResizableDemo() {
 
       <ResizablePanel defaultSize={40}>
         <ResizablePanelGroup direction="vertical">
-          <ResizablePanel defaultSize={25}>
-            <img src={sushi} alt="" />
+          <ResizablePanel defaultSize={50}>
+            <img src={dinos} alt="" />
           </ResizablePanel>
           <ResizableHandle />
-          <ResizablePanel defaultSize={75}>
-            <ResizablePanelGroup direction="vertical">
-              <ResizablePanel defaultSize={25}>
-                <img src={picnic} alt="" />
-              </ResizablePanel>
-              <ResizableHandle />
-              <ResizablePanel defaultSize={25}>
-                <img src={sandwich} alt="" />
-              </ResizablePanel>
-            </ResizablePanelGroup>
+          <ResizablePanel defaultSize={50}>
+                <img src={cuddle} alt="" />
           </ResizablePanel>
         </ResizablePanelGroup>
       </ResizablePanel>
