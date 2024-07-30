@@ -7,6 +7,7 @@ type PolaroidProps = {
 };
 
 export default function Polaroid({src, caption, className=""}: PolaroidProps) {
+  console.log(className);
   return (
     <div className="item">
       <div className="polaroid">

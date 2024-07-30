@@ -1,4 +1,3 @@
-import React from "react";
 import VisionBoard from "./VisionBoard";
 import Typewriter from "@/components/mine/Typewriter";
 import FestinSound from "../../assets/festin-sound.mp3";
@@ -8,7 +7,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 type Props = {};
 
-export default function index({}: Props) {
+export default function index() {
   useEffect(() => {
     const audio = playSound(FestinSound);
 
