@@ -5,7 +5,6 @@ import { useEffect } from "react";
 import { playSound } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-type Props = {};
 
 export default function index() {
   useEffect(() => {
