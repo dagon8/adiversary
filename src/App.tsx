@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import { AppProvider } from "./context/Context";
@@ -7,32 +7,17 @@ import Anniversary from "./pages/Anniversary";
 import Date from "./pages/Date";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />,
-    },
-    {
-      path: "/login",
-      element: <Login />,
-    },
-    {
-      path: "/gallery",
-      element: <Gallery />,
-    },
-    {
-      path: "/anniversary",
-      element: <Anniversary />,
-    },
-    {
-      path: "/date",
-      element: <Date />,
-    },
-  ]);
-
   return (
     <AppProvider>
-      <RouterProvider router={router} />
+      <BrowserRouter basename="/adiversary/">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/anniversary" element={<Anniversary />} />
+          <Route path="/date" element={<Date />} />
+        </Routes>
+      </BrowserRouter>
     </AppProvider>
   );
 }
